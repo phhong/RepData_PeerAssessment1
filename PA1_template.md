@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -31,7 +36,7 @@ total_step<-aggregate(steps ~ date, activity_complete , sum)
 hist(total_step$steps,breaks=20,ylim=c(0,20),main="Histogram of total number of steps taken each day",xlab="total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-3](./PA1_template_files/figure-html/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
 
@@ -55,7 +60,7 @@ average_daily_step<-aggregate(steps ~ interval, activity_complete , mean)
 plot(average_daily_step,type="l",main="Plot of interval and average number of steps")
 ```
 
-![plot of chunk unnamed-chunk-5](./PA1_template_files/figure-html/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
 
 ```r
@@ -118,7 +123,7 @@ new_total_step<-aggregate(steps ~ date, new_activity , sum)
 hist(new_total_step$steps,breaks=20,ylim=c(0,20),main="Histogram of total number of steps taken each day",xlab="total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-10](./PA1_template_files/figure-html/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
 
 ```r
 new_step_mean<-mean(new_total_step$steps)
@@ -172,7 +177,7 @@ library(lattice)
 xyplot(steps ~ interval | weekday, data = average_weekday_step, type="l", layout = c(1, 2), xlab="Interval", ylab="Number of steps")
 ```
 
-![plot of chunk unnamed-chunk-12](./PA1_template_files/figure-html/unnamed-chunk-12.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
 
 
 
